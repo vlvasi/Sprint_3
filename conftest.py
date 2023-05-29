@@ -7,7 +7,7 @@ url = 'https://stellarburgers.nomoreparties.site'
     browser = webdriver.Chrome(executable_path='./chromedriver')
     browser.get(url)
     yield browser
-    rowser.quit()
+    browser.quit()
 
 @pytest.fixture
 def login(drover):
