@@ -38,6 +38,6 @@ class Locators:
     # password
     PASSWORD = (By.XPATH, "//label[contains(text(),'Пароль')]")
     # name
-    NAME = [By.XPATH, "//label[contains(text(),'Имя')]"]
+    NAME = (By.XPATH, "//label[contains(text(),'Имя')]")
     # Поле Восстановить пароль
     CODE_RECOVER = (By.XPATH, "//label[contains(text(),'Введите код из письма')]")

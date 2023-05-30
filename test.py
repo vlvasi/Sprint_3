@@ -24,7 +24,6 @@ class TestStellarBurgersRegistration():
         driver.find_element(*Locators.INCORECT_PASSWORD_TEXT)
         reg_text = WebDriverWait(driver, 3).until(EC.visibility_of_element_located(*Locators.INCORECT_PASSWORD_TEXT)).text
         assert reg_text
-        driver.quite()
 
 class TestStellarBurgersLogin():
     def test_login_button(selfself, driver):
@@ -59,14 +58,12 @@ class TestStellarBurgersLogin():
         driver.find_element(*Locators.SAVE_BUTTON).click()
         WebDriverWait(driver, 3)
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site'
-        driver.quite()
 
 class TestStellarBurgersAccount():
     def test_account_tap(self, driver):
         driver.get('https://stellarburgers.nomoreparties.site/')
         driver.find_element(*Locators.ACC_BUTTON).click()
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/account/profile'
-        driver.quite()
 
 class TestStellarBurgersConstructor():
     def test_constructor_button_tap(self, driver):
@@ -78,14 +75,12 @@ class TestStellarBurgersConstructor():
         driver.get('https://stellarburgers.nomoreparties.site/account/profile')
         driver.find_element(*Locators.LOGO_BUTTON).click()
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site'
-        driver.quite()
 
 class TestStellarBurgersExit():
     def test_exit_button_tap(self, driver):
         driver.get('https://stellarburgers.nomoreparties.site/account/profile')
         driver.find_element(*Locators.EXIT_BUTTON).click()
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'
-        driver.quite()
 
 class TestStellarBurgersSections():
     def test_change_section_sause(self, driver):
@@ -103,7 +98,6 @@ class TestStellarBurgersSections():
         driver.find_element(*Locators.TOPPING_SECTIONS).click
         section_name = driver.find_element(*Locators.TOPPING_HEADING).text()
         assert section_name == 'Начинки'
-        driver.quite()
 
 
 
