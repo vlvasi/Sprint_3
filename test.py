@@ -91,17 +91,17 @@ class TestStellarBurgersSections():
     def test_change_section_sause(self, driver):
         driver.get('https://stellarburgers.nomoreparties.site/')
         driver.find_element(*Locators.SAUSE_SECTIONS).click
-        section_name = driver.find_element(*Locators.SAUSE_SECTIONS).text()
+        section_name = driver.find_element(*Locators.SAUSE_HEADING).text()
         assert section_name == 'Соусы'
 
     def test_change_section_buns(self, driver):
         driver.find_element(*Locators.BUNS_SECTIONS).click()
-        section_name = driver.find_element(*Locators.BUNS_SECTIONS).text()
+        section_name = driver.find_element(*Locators.BUNS_HEADING).text()
         assert section_name == 'Булки'
 
     def test_change_section_topping(self, driver):
         driver.find_element(*Locators.TOPPING_SECTIONS).click
-        section_name = driver.find_element(*Locators.TOPPING_SECTIONS).text()
+        section_name = driver.find_element(*Locators.TOPPING_HEADING).text()
         assert section_name == 'Начинки'
         driver.quite()
 
