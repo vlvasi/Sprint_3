@@ -34,10 +34,10 @@ class Locators:
     # Заголовок Начинки
     TOPPING_HEADING = (By.XPATH, "//h2[contains(text(),'Начинки')]")
     # email
-    EMAIL = (By.ID, 'Email')
+    EMAIL = (By.XPATH, "//label[contains(text(),'Email')]")
     # password
-    PASSWORD = (By.ID, 'Пароль')
+    PASSWORD = (By.XPATH, "//label[contains(text(),'Пароль')]")
     # name
-    NAME = (By.NAME, 'name')
+    NAME = [By.XPATH, "//label[contains(text(),'Имя')]"]
     # Поле Восстановить пароль
     CODE_RECOVER = (By.XPATH, "//label[contains(text(),'Введите код из письма')]")
